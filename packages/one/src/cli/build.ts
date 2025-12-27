@@ -128,9 +128,9 @@ export async function build(args: {
         copyPublicDir: false,
         minify: false,
         rollupOptions: {
-          treeshake: treeshake ?? {
+          treeshake: (treeshake ?? {
             moduleSideEffects: false,
-          },
+          }) as any,
 
           plugins: [
             // otherwise rollup is leaving commonjs-only top level imports...
@@ -189,7 +189,7 @@ export async function build(args: {
       finalApiBuildConf
     )
 
-    return output as RollupOutput
+    return output as unknown as RollupOutput
   }
 
   let apiOutput: RollupOutput | null = null

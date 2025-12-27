@@ -15,7 +15,8 @@
         "tamagui-build.js",
         "externalNodePlugin.js"
       ],
-      "outputs": [".next/**/*", "dist/**/*", "types/**/*"]
+      "outputs": [".next/**/*", "dist/**/*", "types/**/*"],
+      "passThroughEnv": ["VP_TOKEN", "GITHUB_TOKEN"]
     },
     "check": {
       "cache": false,
