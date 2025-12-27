@@ -1,7 +1,7 @@
 import FSExtra from 'fs-extra'
 import { rm } from 'node:fs/promises'
 import { sep } from 'node:path'
-import type { OutputAsset, OutputChunk, RollupOutput } from 'rollup'
+import type { OutputAsset, OutputChunk, RolldownOutput } from 'rolldown'
 import {
   loadConfigFromFile,
   mergeConfig,
@@ -25,15 +25,12 @@ const { existsSync } = FSExtra
 Error.stackTraceLimit = Number.POSITIVE_INFINITY
 
 const disableOptimizationConfig = {
-  optimizeDeps: {
-    esbuildOptions: {
-      minify: false,
-    },
-  },
+  // Note: esbuildOptions was removed in Vite 8
+  optimizeDeps: {},
 
   build: {
     minify: false,
-    rollupOptions: {
+    rolldownOptions: {
       treeshake: false,
       output: {
         minifyInternalExports: false,
@@ -180,7 +177,7 @@ export const build = async (optionsIn: VXRNOptions, buildArgs: BuildArgs = {}) =
   } satisfies Plugin
 
   let clientOutput
-  let clientBuildPromise: Promise<RollupOutput> | undefined
+  let clientBuildPromise: Promise<RolldownOutput> | undefined
 
   if (buildArgs.step !== 'generate') {
     let clientBuildConfig = mergeConfig(webBuildConfig, {
@@ -226,7 +223,7 @@ export const build = async (optionsIn: VXRNOptions, buildArgs: BuildArgs = {}) =
 
     console.info(`\n 🔨 build ${options.build?.server !== false ? 'client + server' : 'client'}\n`)
 
-    clientBuildPromise = viteBuild(clientBuildConfig) as Promise<RollupOutput>
+    clientBuildPromise = viteBuild(clientBuildConfig) as Promise<RolldownOutput>
   }
 
   const serverOptions = options.build?.server
@@ -287,7 +284,7 @@ export const build = async (optionsIn: VXRNOptions, buildArgs: BuildArgs = {}) =
 
   let serverOutput: [OutputChunk, ...(OutputChunk | OutputAsset)[]] | undefined
   let clientManifest
-  let serverBuildPromise: Promise<RollupOutput> | undefined
+  let serverBuildPromise: Promise<RolldownOutput> | undefined
 
   if (serverOptions !== false) {
     if (!clientBuildPromise) {
@@ -299,7 +296,7 @@ export const build = async (optionsIn: VXRNOptions, buildArgs: BuildArgs = {}) =
 
     serverBuildPromise = viteBuild(
       userServerBuildConf ? mergeConfig(serverBuildConfig, userServerBuildConf) : serverBuildConfig
-    ) as Promise<RollupOutput>
+    ) as Promise<RolldownOutput>
   }
 
   // Wait for both builds to complete in parallel

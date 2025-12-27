@@ -102,9 +102,8 @@ export async function getBaseViteConfig(
     },
 
     build: {
-      commonjsOptions: {
-        transformMixedEsModules: true,
-      },
+      // Note: commonjsOptions was removed in Vite 8 (now a no-op)
+      // CommonJS handling is now done by Rolldown's built-in plugin
     },
   } satisfies Omit<InlineConfig, 'plugins'>
 }

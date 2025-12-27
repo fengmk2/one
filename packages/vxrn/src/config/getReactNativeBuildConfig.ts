@@ -207,16 +207,17 @@ export async function getReactNativeBuildConfig(
     appType: 'custom',
     root,
     clearScreen: false,
-    esbuild: false,
+    // Note: In Vite 8, oxc is used instead of esbuild for transforms
+    // Setting to false disables built-in transforms
+    oxc: false,
 
     // the huge logs actually add quite a bit of time to build
     customLogger,
 
     optimizeDeps: {
       ...optimizeDeps,
-      esbuildOptions: {
-        jsx: 'automatic',
-      },
+      // Note: esbuildOptions was replaced by rolldownOptions in Vite 8
+      // JSX is handled by the oxc configuration
     },
 
     resolve: {
@@ -244,13 +245,9 @@ export async function getReactNativeBuildConfig(
     build: {
       ssr: true,
       minify: false,
-      commonjsOptions: {
-        transformMixedEsModules: true,
-        ignore(id) {
-          return id === 'react/jsx-runtime' || id === 'react/jsx-dev-runtime'
-        },
-      },
-      rollupOptions: {
+      // Note: commonjsOptions was removed in Vite 8 (now a no-op)
+      // CommonJS handling is now done by Rolldown's built-in plugin
+      rolldownOptions: {
         input: options.entries.native,
         treeshake: false,
         preserveEntrySignatures: 'strict',
