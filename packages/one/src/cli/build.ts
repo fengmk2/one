@@ -2,7 +2,7 @@ import { createRequire } from 'node:module'
 import Path, { join, relative, resolve } from 'node:path'
 import FSExtra from 'fs-extra'
 import MicroMatch from 'micromatch'
-import type { OutputAsset, RollupOutput } from 'rollup'
+import type { RolldownOutput } from 'rolldown'
 import { type InlineConfig, mergeConfig, build as viteBuild } from 'vite'
 import {
   type ClientManifestEntry,
@@ -127,10 +127,9 @@ export async function build(args: {
         outDir: `dist/${subFolder}`,
         copyPublicDir: false,
         minify: false,
-        rollupOptions: {
-          treeshake: treeshake ?? {
-            moduleSideEffects: false,
-          },
+        rolldownOptions: {
+          // treeshake option in Rolldown uses different types than Rollup
+          treeshake: (treeshake ?? true) as boolean,
 
           plugins: [
             // otherwise rollup is leaving commonjs-only top level imports...
@@ -189,10 +188,10 @@ export async function build(args: {
       finalApiBuildConf
     )
 
-    return output as RollupOutput
+    return output as RolldownOutput
   }
 
-  let apiOutput: RollupOutput | null = null
+  let apiOutput: RolldownOutput | null = null
   if (manifest.apiRoutes.length) {
     console.info(`\n 🔨 build api routes\n`)
     apiOutput = await buildCustomRoutes('api', manifest.apiRoutes)
@@ -217,7 +216,8 @@ export async function build(args: {
   // for the require Sitemap in getRoutes
   globalThis['require'] = createRequire(join(import.meta.url, '..'))
 
-  const assets: OutputAsset[] = []
+  // Using any[] for compatibility between Rollup/Rolldown output types
+  const assets: any[] = []
 
   const builtRoutes: One.RouteBuildInfo[] = []
   const sitemapData: RouteSitemapData[] = []

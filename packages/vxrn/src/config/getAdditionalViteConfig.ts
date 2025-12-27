@@ -2,8 +2,6 @@ import type { InlineConfig, UserConfig } from 'vite'
 
 import { getOptimizeDeps } from './getOptimizeDeps'
 
-import { webExtensions } from '../constants'
-
 /**
  * These configs are originally in `getViteServerConfig`. Maybe we should organize and move each of them into other more appropriate places.
  */
@@ -24,17 +22,15 @@ export function getAdditionalViteConfig(): Omit<InlineConfig, 'plugins'> {
       client: {
         optimizeDeps: {
           include: ['react-native-screens'],
-          esbuildOptions: {
-            resolveExtensions: webExtensions,
-          },
+          // Note: esbuildOptions.resolveExtensions was removed in Vite 8
+          // Extensions are now handled by the main resolve configuration
         },
       },
     },
 
     optimizeDeps: {
-      esbuildOptions: {
-        target: 'esnext',
-      },
+      // Note: esbuildOptions was removed in Vite 8
+      // The target is now handled by the main build configuration
     },
 
     server: {

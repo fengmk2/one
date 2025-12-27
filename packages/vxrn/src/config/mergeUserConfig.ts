@@ -6,9 +6,6 @@ type OptimizeDepsConf = {
   include: string[]
   exclude: string[]
   needsInterop: string[]
-  esbuildOptions: {
-    resolveExtensions: string[]
-  }
 }
 
 type DepsOptConf = {
@@ -89,9 +86,5 @@ export function deepMergeOptimizeDeps(
     ...(extraDepsOpt?.needsInterop || []),
   ])
 
-  a.optimizeDeps.esbuildOptions = {
-    ...(a.optimizeDeps.esbuildOptions || {}),
-    ...(b.optimizeDeps.esbuildOptions || {}),
-    ...(extraDepsOpt?.esbuildOptions || {}),
-  }
+  // Note: esbuildOptions was removed in Vite 8 (using Rolldown now)
 }

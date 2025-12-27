@@ -1,5 +1,4 @@
 import type { UserConfig } from 'vite'
-import { webExtensions } from '../constants'
 
 // TODO we need to traverse to get sub-deps...
 
@@ -141,9 +140,8 @@ export function getOptimizeDeps(mode: 'build' | 'serve') {
       // Enable lazy optimization - don't wait for all deps before starting server
       // This allows browser to process requests in parallel for faster initial load
       holdUntilCrawlEnd: false,
-      esbuildOptions: {
-        resolveExtensions: webExtensions,
-      },
+      // Note: esbuildOptions.resolveExtensions was removed in Vite 8
+      // Extensions are now handled by the main resolve configuration
     } satisfies UserConfig['optimizeDeps'],
   }
 }

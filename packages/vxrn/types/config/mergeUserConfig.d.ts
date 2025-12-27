@@ -3,9 +3,6 @@ type OptimizeDepsConf = {
     include: string[];
     exclude: string[];
     needsInterop: string[];
-    esbuildOptions: {
-        resolveExtensions: string[];
-    };
 };
 type DepsOptConf = {
     optimizeDeps?: DepOptimizationConfig;

@@ -6,9 +6,6 @@ export declare function getOptimizeDeps(mode: 'build' | 'serve'): {
         exclude: string[];
         needsInterop: string[];
         holdUntilCrawlEnd: false;
-        esbuildOptions: {
-            resolveExtensions: string[];
-        };
     };
 };
 //# sourceMappingURL=getOptimizeDeps.d.ts.map
