@@ -14,7 +14,7 @@
       "Bash(yarn test:*)",
       "Bash(rm:*)",
       "Bash(mkdir:*)",
-      "Bash(TEST_ONLY=dev yarn vitest --config ./vitest.config.rolldown.ts --run --reporter=dot --color=false api-rolldown.test.ts)",
+      "Bash(TEST_ONLY=dev yarn vite test --config ./vitest.config.rolldown.ts --run --reporter=dot --color=false api-rolldown.test.ts)",
       "Bash(bun llink:*)",
       "Bash(bun:*)"
     ],

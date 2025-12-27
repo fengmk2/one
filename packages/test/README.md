@@ -18,7 +18,7 @@ export default defineConfig({
 })
 ```
 
-Run tests with `TEST_ENV=dev yarn vitest --run` or `TEST_ENV=prod yarn vitest --run`.
+Run tests with `TEST_ENV=dev yarn vite test --run` or `TEST_ENV=prod yarn vite test --run`.
 
 
 ### React Native iOS

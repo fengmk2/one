@@ -11,9 +11,9 @@
     "prod": "one build && one serve",
     "serve": "one serve",
     "test": "yarn test:spa && yarn test:ssg && yarn test:ssr",
-    "test:spa": "DEFAULT_RENDER_MODE=spa TEST_ONLY=prod yarn vitest --run --reporter=verbose --color=false",
-    "test:ssg": "DEFAULT_RENDER_MODE=ssg TEST_ONLY=prod yarn vitest --run --reporter=verbose --color=false",
-    "test:ssr": "DEFAULT_RENDER_MODE=ssr TEST_ONLY=prod yarn vitest --run --reporter=verbose --color=false",
+    "test:spa": "DEFAULT_RENDER_MODE=spa TEST_ONLY=prod yarn vite test --run --reporter=verbose --color=false",
+    "test:ssg": "DEFAULT_RENDER_MODE=ssg TEST_ONLY=prod yarn vite test --run --reporter=verbose --color=false",
+    "test:ssr": "DEFAULT_RENDER_MODE=ssr TEST_ONLY=prod yarn vite test --run --reporter=verbose --color=false",
     "test:all": "yarn test:spa && yarn test:ssg",
     "typecheck": "tsc --noEmit"
   },
