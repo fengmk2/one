@@ -3,7 +3,8 @@
   "extends": ["//"],
   "tasks": {
     "build:js": {
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "build": {
       "dependsOn": ["^build"],
@@ -16,34 +17,41 @@
         "externalNodePlugin.js"
       ],
       "outputs": [".next/**/*", "dist/**/*", "types/**/*"],
-      "passThroughEnv": ["VP_TOKEN", "GITHUB_TOKEN"]
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "check": {
       "cache": false,
-      "outputs": []
+      "outputs": [],
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "typecheck": {
       "cache": false,
-      "outputs": []
+      "outputs": [],
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "test": {
       "dependsOn": ["^build:js"],
-      "outputs": []
+      "outputs": [],
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "clean": {
       "outputs": ["dist/**/*"],
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "clean:build": {
       "outputs": [],
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "lint": {
-      "outputs": []
+      "outputs": [],
+      "passThroughEnv": ["VP_TOKEN"]
     },
     "lint:fix": {
       "cache": false,
-      "outputs": ["src/**/*"]
+      "outputs": ["src/**/*"],
+      "passThroughEnv": ["VP_TOKEN"]
     }
   }
 }
