@@ -26,7 +26,7 @@ export declare function getReactNativeBuildConfig(options: Pick<VXRNOptionsFille
         warnOnce(msg: string, options?: import("vite").LogOptions): void;
         error(msg: string, options?: import("vite").LogErrorOptions): void;
         clearScreen(type: import("vite").LogType): void;
-        hasErrorLogged(error: Error | import("rollup").RollupError): boolean;
+        hasErrorLogged(error: Error | import("@voidzero-dev/vite-plus-core/rolldown").RollupError): boolean;
         hasWarned: boolean;
     };
     optimizeDeps: {
@@ -64,8 +64,8 @@ export declare function getReactNativeBuildConfig(options: Pick<VXRNOptionsFille
                 preserveModules: true;
                 format: "cjs";
             };
-            onwarn(message: import("rollup").RollupLog, warn: import("rollup").LoggingFunction): void;
-            onLog(level: import("rollup").LogLevel, log: import("rollup").RollupLog, handler: import("rollup").LogOrStringHandler): void;
+            onwarn(message: import("@voidzero-dev/vite-plus-core/rolldown").RollupLog, warn: (warning: import("@voidzero-dev/vite-plus-core/rolldown").RollupLogWithString | (() => import("@voidzero-dev/vite-plus-core/rolldown").RollupLogWithString)) => void): void;
+            onLog(level: import("@voidzero-dev/vite-plus-core/rolldown").LogLevel, log: import("@voidzero-dev/vite-plus-core/rolldown").RollupLog, handler: import("@voidzero-dev/vite-plus-core/rolldown").LogOrStringHandler): void;
         };
     };
 }>;

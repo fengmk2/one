@@ -7,6 +7,7 @@ on:
 env:
   # Package name in the monorepo
   test_app_package_name: test-test
+  VP_TOKEN: ${{ secrets.VP_TOKEN }}
 
 jobs:
   checks:

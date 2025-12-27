@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vite'
+import type { UserConfig } from '@voidzero-dev/vite-plus'
 import { one } from 'one/vite'
 
 export default {

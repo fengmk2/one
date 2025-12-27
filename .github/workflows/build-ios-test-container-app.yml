@@ -15,6 +15,7 @@ env:
   # Redis database used for caching and remembering things between runs, such as the last build number
   # KV_STORE_REDIS_REST_URL:
   # KV_STORE_REDIS_REST_TOKEN:
+  VP_TOKEN: ${{ secrets.VP_TOKEN }}
 on:
   workflow_call:
     inputs:

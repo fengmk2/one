@@ -64,7 +64,9 @@
     "watch:ts": "ultra -r --no-pretty --concurrency 400 typecheck -w --preserveWatchOutput"
   },
   "resolutions": {
-    "esbuild": "0.25.11"
+    "esbuild": "0.25.11",
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
   },
   "dependencies": {
     "@biomejs/biome": "2.3.3",
@@ -105,5 +107,8 @@
     "tamagui": {
       "workspace": "~/tamagui"
     }
+  },
+  "devDependencies": {
+    "@voidzero-dev/vite-plus": "catalog:"
   }
 }

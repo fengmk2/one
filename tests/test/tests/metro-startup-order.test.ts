@@ -1,6 +1,6 @@
 import { spawn } from 'node:child_process'
 import getPort from 'get-port'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it } from '@voidzero-dev/vite-plus/test'
 
 /**
  * Test that Metro initialization happens AFTER Vite server is fully started.

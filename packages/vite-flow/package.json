@@ -31,11 +31,12 @@
     "@babel/helper-plugin-utils": "^7.27.1",
     "@react-native/babel-preset": "^0.82.1",
     "@vxrn/resolve": "workspace:*",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.3",
-    "@tamagui/build": "^1.141.4"
+    "@tamagui/build": "^1.141.4",
+    "@voidzero-dev/vite-plus": "catalog:"
   },
   "publishConfig": {
     "access": "public"

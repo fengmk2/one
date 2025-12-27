@@ -1,4 +1,4 @@
-import { afterEach, beforeAll, expect, test, inject } from 'vitest'
+import { afterEach, beforeAll, expect, test, inject } from '@voidzero-dev/vite-plus/test'
 import path from 'node:path'
 import { remote } from 'webdriverio'
 import { getWebDriverConfig } from '@vxrn/test/ios'

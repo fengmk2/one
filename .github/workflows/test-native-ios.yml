@@ -7,6 +7,7 @@ env:
   # Note that if you also specified an iOS version, the simulator device must be available for that version. To see available devices and their iOS versions, run `xcrun simctl list devices available --json | jq -r '[.devices | to_entries[] | select(.key | contains("SimRuntime.iOS")) | .key as $runtime | .value[] | { runtime: $runtime, name: .name, udid: .udid }]'`.
   # Examples: "iPhone 15 Pro", "iPhone 16 Pro Max".
   simulator_device_name: iPhone 16 Pro
+  VP_TOKEN: ${{ secrets.VP_TOKEN }}
 
 on:
   push:

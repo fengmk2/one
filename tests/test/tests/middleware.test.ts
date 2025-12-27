@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test } from '@voidzero-dev/vite-plus/test'
 
 // set this up for testing, pausing
 async function fetchThing(path = '/', type: 'text' | 'json' | 'headers') {
