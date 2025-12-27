@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, inject, it } from 'vitest'
+import { beforeAll, describe, expect, inject, it } from '@voidzero-dev/vite-plus/test'
 import './api-rolldown.test'
 
 describe(`API Tests`, () => {

@@ -37,6 +37,7 @@
     "uuid": "9.0.0"
   },
   "devDependencies": {
-    "vite": "^7.1.12"
+    "@voidzero-dev/vite-plus": "catalog:",
+    "vite": "catalog:"
   }
 }

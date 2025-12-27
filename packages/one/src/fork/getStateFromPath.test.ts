@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it } from '@voidzero-dev/vite-plus/test'
 import { getMockConfig } from '../testing-utils'
 import { getPathFromState } from './getPathFromState'
 import { getStateFromPath } from './getStateFromPath'

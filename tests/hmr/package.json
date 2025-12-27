@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "one dev",
     "test-ios": "yarn test-ios:dev && yarn test-ios:prod",
-    "test-ios:dev": "TEST_ONLY=dev TEST_ENV=dev DEV_PORT=8081 vitest --config ./vitest.config.ios.ts --run",
+    "test-ios:dev": "TEST_ONLY=dev TEST_ENV=dev DEV_PORT=8081 vite test --config ./vitest.config.ios.ts --run",
     "test-ios:prod": ":",
-    "test-macos": "TEST_ONLY=dev vitest"
+    "test-macos": "TEST_ONLY=dev vite test"
   },
   "dependencies": {
     "@react-navigation/native": "~7.1.19",
@@ -19,11 +19,12 @@
     "react-native": "0.81.5",
     "react-native-safe-area-context": "~5.6.1",
     "react-native-screens": "~4.16.0",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   },
   "devDependencies": {
+    "@voidzero-dev/vite-plus": "catalog:",
     "playwright": "^1.57.0",
-    "vitest": "^4.0.6",
+    "vitest": "catalog:",
     "webdriverio": "^9.5.4"
   }
 }

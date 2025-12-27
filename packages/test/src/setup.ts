@@ -1,12 +1,12 @@
-import type { TestProject } from 'vitest/node'
-import type { Assertion } from 'vitest'
+import type { TestProject } from '@voidzero-dev/vite-plus/test/node'
+import type { Assertion } from '@voidzero-dev/vite-plus/test'
 import { spawn } from 'node:child_process'
 import { setupTestServers, type TestInfo } from './setupTest'
 
 // to keep the import which is needed for declare
 const y: Assertion = 0 as any
 
-declare module 'vitest' {
+declare module '@voidzero-dev/vite-plus/test' {
   export interface ProvidedContext {
     testInfo: TestInfo
   }

@@ -1,5 +1,5 @@
 import { ONLY_TEST_PROD } from '@vxrn/test'
-import { describe, expect, inject, it } from 'vitest'
+import { describe, expect, inject, it } from '@voidzero-dev/vite-plus/test'
 
 describe('Simple Run Tests', () => {
   if (ONLY_TEST_PROD) {

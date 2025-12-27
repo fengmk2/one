@@ -28,6 +28,7 @@
   "devDependencies": {
     "@react-native-community/cli": "^20.0.2",
     "@types/react": "^19.2.2",
-    "vite": "^7.1.12"
+    "@voidzero-dev/vite-plus": "catalog:",
+    "vite": "catalog:"
   }
 }

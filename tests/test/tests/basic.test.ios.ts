@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest'
+import { expect, test } from '@voidzero-dev/vite-plus/test'
 import { remote } from 'webdriverio'
 import { getWebDriverConfig } from '@vxrn/test/ios'
 const sharedTestOptions = { timeout: 10 * 60 * 1000, retry: 3 }

@@ -1,4 +1,4 @@
-import { inject } from 'vitest'
+import { inject } from '@voidzero-dev/vite-plus/test'
 import type { WebdriverIOConfig } from './internal-utils/ios'
 
 export function getWebDriverConfig(): WebdriverIOConfig {

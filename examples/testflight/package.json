@@ -52,7 +52,8 @@
     "@faker-js/faker": "next",
     "@react-native-community/cli": "^20.0.2",
     "@tamagui/vite-plugin": "^1.141.4",
+    "@voidzero-dev/vite-plus": "catalog:",
     "tsx": "^4.20.6",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   }
 }

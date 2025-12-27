@@ -1,5 +1,5 @@
 import { type Browser, type BrowserContext, chromium } from 'playwright'
-import { afterAll, beforeAll, describe, expect, it, test } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, test } from '@voidzero-dev/vite-plus/test'
 
 const serverUrl = process.env.ONE_SERVER_URL!
 const isDebug = !!process.env.DEBUG

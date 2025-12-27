@@ -1,5 +1,5 @@
-import type { TestProject } from 'vitest/node'
-import type { Assertion } from 'vitest'
+import type { TestProject } from '@voidzero-dev/vite-plus/test/node'
+import type { Assertion } from '@voidzero-dev/vite-plus/test'
 import { setupTestServers, type TestInfo } from './setupTest'
 import { setup as defaultSetup, teardown as defaultTeardown } from './setup'
 import { getWebDriverConfig, type WebdriverIOConfig } from './internal-utils/ios'
@@ -7,7 +7,7 @@ import { getWebDriverConfig, type WebdriverIOConfig } from './internal-utils/ios
 // to keep the import which is needed for declare
 const y: Assertion = 0 as any
 
-declare module 'vitest' {
+declare module '@voidzero-dev/vite-plus/test' {
   export interface ProvidedContext {
     webDriverConfig: WebdriverIOConfig
   }
