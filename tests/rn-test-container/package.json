@@ -25,10 +25,11 @@
     "react-native-svg": "15.12.1",
     "react-native-web": "^0.21.2",
     "react-native-worklets": "0.5.1",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   },
   "devDependencies": {
-    "vitest": "^4.0.6",
+    "@voidzero-dev/vite-plus": "catalog:",
+    "vitest": "catalog:",
     "webdriverio": "^9.5.4"
   }
 }

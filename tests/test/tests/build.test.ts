@@ -1,5 +1,5 @@
 import { readFile, pathExists } from 'fs-extra'
-import { describe, expect, it, inject } from 'vitest'
+import { describe, expect, it, inject } from '@voidzero-dev/vite-plus/test'
 import { ONLY_TEST_DEV } from '@vxrn/test'
 import { join } from 'node:path'
 

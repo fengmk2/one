@@ -44,5 +44,6 @@
       "cache": false,
       "outputs": ["src/**/*"]
     }
-  }
+  },
+  "globalPassThroughEnv": ["VP_TOKEN"]
 }

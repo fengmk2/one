@@ -1,5 +1,5 @@
 import type { PathConfigMap } from '@react-navigation/core'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it } from '@voidzero-dev/vite-plus/test'
 
 import { getPathFromState, type State } from './getPathFromState'
 

@@ -1,4 +1,4 @@
-import { defineConfig, configDefaults } from 'vitest/config'
+import { defineConfig, configDefaults } from '@voidzero-dev/vite-plus'
 
 export default defineConfig({
   test: {

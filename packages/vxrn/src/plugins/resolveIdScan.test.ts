@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { describe, expect, it, vi } from '@voidzero-dev/vite-plus/test'
 
 /**
  * Tests that resolveId hooks properly skip during Vite's dependency optimization scan phase.

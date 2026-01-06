@@ -1,4 +1,4 @@
-import { afterAll, afterEach, beforeAll, expect, test } from 'vitest'
+import { afterAll, afterEach, beforeAll, expect, test } from '@voidzero-dev/vite-plus/test'
 import { type Browser, type BrowserContext, chromium } from 'playwright'
 import { editComponentFile, editLayoutFile, editRouteFile, editTestComponentContainingRelativeImportFile, revertEditedFiles } from './utils'
 
