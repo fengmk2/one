@@ -46,8 +46,9 @@
     "@react-native-community/cli": "^20.0.2",
     "@tamagui/vite-plugin": "^1.142.0",
     "@types/react": "^19.2.2",
+    "@voidzero-dev/vite-plus": "catalog:",
     "babel-plugin-react-compiler": "^1.0.0",
     "typescript": "^5.7.3",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   }
 }

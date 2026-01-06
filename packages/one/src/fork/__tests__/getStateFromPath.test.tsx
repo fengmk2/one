@@ -10,7 +10,7 @@ import type { InitialState } from '@react-navigation/routers'
 import { produce } from 'immer'
 // @modified - start: use vitest instead of jest
 // import { expect, test } from '@jest/globals';
-import { expect, test } from 'vitest'
+import { expect, test } from '@voidzero-dev/vite-plus/test'
 
 import { findFocusedRoute } from '../findFocusedRoute'
 import { getPathFromState } from '../getPathFromState'

@@ -7,16 +7,17 @@
     "dev": "one dev",
     "build:web": "one build",
     "serve": "wrangler dev dist/worker.js --port 3457",
-    "test": "vitest run"
+    "test": "vite test run"
   },
   "dependencies": {
     "one": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "^1.42.1",
+    "@voidzero-dev/vite-plus": "catalog:",
     "playwright": "^1.42.1",
     "typescript": "^5.4.0",
-    "vitest": "^4.0.6",
+    "vitest": "catalog:",
     "wrangler": "^4.0.0"
   }
 }

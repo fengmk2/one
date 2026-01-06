@@ -1,5 +1,5 @@
 import { tamaguiPlugin } from '@tamagui/vite-plugin'
-import type { UserConfig } from 'vite'
+import type { UserConfig } from '@voidzero-dev/vite-plus'
 import { one, resolvePath } from 'one/vite'
 
 export default {

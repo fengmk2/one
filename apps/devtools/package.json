@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
-    "vite": "^7.1.12"
+    "@voidzero-dev/vite-plus": "catalog:",
+    "vite": "catalog:"
   }
 }

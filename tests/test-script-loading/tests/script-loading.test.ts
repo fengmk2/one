@@ -1,5 +1,5 @@
 import { type Browser, type BrowserContext, chromium } from 'playwright'
-import { afterAll, beforeAll, describe, expect, test } from 'vitest'
+import { afterAll, beforeAll, describe, expect, test } from '@voidzero-dev/vite-plus/test'
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 

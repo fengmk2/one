@@ -15,8 +15,8 @@
     "prebuild:native": "one prebuild",
     "test": "yarn test:dev && yarn test:dev-non-cli && yarn test:prod && yarn test:app-cases-dev && yarn test:app-cases-prod",
     "test-ios": "yarn test-ios:dev && yarn test-ios:prod",
-    "test-ios:dev": "TEST_ONLY=dev TEST_ENV=dev DEV_PORT=8081 vitest --config ./vitest.config.ios.ts --run",
-    "test-ios:prod": "TEST_ONLY=prod TEST_ENV=prod DEV_PORT=8081 vitest --config ./vitest.config.ios.ts --run",
+    "test-ios:dev": "TEST_ONLY=dev TEST_ENV=dev DEV_PORT=8081 vite test --config ./vitest.config.ios.ts --run",
+    "test-ios:prod": "TEST_ONLY=prod TEST_ENV=prod DEV_PORT=8081 vite test --config ./vitest.config.ios.ts --run",
     "test:app-cases": "yarn test:app-cases:basic && yarn test:app-cases:not-found-at-root-with-assets && yarn test:app-cases:dynamic-route-at-root-with-assets && yarn test:app-cases:catch-all-route-at-root-with-assets",
     "test:app-cases-dev": "TEST_ONLY=dev yarn test:app-cases",
     "test:app-cases-prod": "TEST_ONLY=prod yarn test:app-cases",
@@ -61,12 +61,13 @@
   },
   "devDependencies": {
     "@react-native-community/cli": "^20.0.2",
+    "@voidzero-dev/vite-plus": "catalog:",
     "@vxrn/utils": "workspace:*",
     "get-port-please": "^3.1.2",
     "playwright": "^1.57.0",
     "tsx": "^4.20.6",
     "typescript": "^5.7.3",
-    "vite": "^7.1.12",
-    "vitest": "^4.0.6"
+    "vite": "catalog:",
+    "vitest": "catalog:"
   }
 }

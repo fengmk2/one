@@ -1,4 +1,4 @@
-import { describe, expect, it, beforeEach, afterEach } from 'vitest'
+import { describe, expect, it, beforeEach, afterEach } from '@voidzero-dev/vite-plus/test'
 import { generateSitemap, type RouteSitemapData } from './generateSitemap'
 import type { One } from '../vite/types'
 

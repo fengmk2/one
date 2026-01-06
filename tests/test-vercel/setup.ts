@@ -11,7 +11,7 @@
 import { spawn, execSync, type ChildProcess } from 'node:child_process'
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
-import type { GlobalSetupContext } from 'vitest/node'
+import type { GlobalSetupContext } from '@voidzero-dev/vite-plus/test/node'
 
 const testDir = process.cwd()
 const PORT = 3456
@@ -111,7 +111,7 @@ export async function teardown() {
   }
 }
 
-declare module 'vitest' {
+declare module '@voidzero-dev/vite-plus/test' {
   export interface ProvidedContext {
     testInfo: {
       testDir: string

@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, inject, it } from 'vitest'
+import { beforeAll, describe, expect, inject, it } from '@voidzero-dev/vite-plus/test'
 
 describe(`API Tests with Rolldown`, () => {
   const serverUrl = process.env.ONE_SERVER_URL

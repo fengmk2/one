@@ -73,10 +73,11 @@
     "@tamagui/build": "^1.142.0",
     "@types/babel__helper-plugin-utils": "^7",
     "@types/node": "^24.10.0",
+    "@voidzero-dev/vite-plus": "catalog:",
     "depcheck": "^1.4.7",
     "expo": "~54.0.20",
     "metro": "^0.82",
-    "vite": "^7.1.12"
+    "vite": "catalog:"
   },
   "publishConfig": {
     "access": "public"

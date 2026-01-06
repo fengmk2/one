@@ -1,5 +1,5 @@
 import { type Browser, type BrowserContext, type Page, chromium } from 'playwright'
-import { afterAll, beforeAll, describe, expect, test } from 'vitest'
+import { afterAll, beforeAll, describe, expect, test } from '@voidzero-dev/vite-plus/test'
 
 /**
  * CSS Preload Tests

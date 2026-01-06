@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest'
+import { expect, test } from '@voidzero-dev/vite-plus/test'
 import { remote } from 'webdriverio'
 import { getWebDriverConfig } from '@vxrn/test/ios'
 import { navigateTo, waitForDisplayed } from '@vxrn/test/utils/appium'
